@@ -20,7 +20,7 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 
-days_you_want_to_keep = datetime.utcnow() - timedelta(days=days_to_keep) #replace days_to_keep for a integer
+days_you_want_to_keep = datetime.utcnow() - timedelta(days=days_to_keep) #replace days_to_keep for an integer
 
 if delete_tweets:
     timeline = tweepy.Cursor(api.user_timeline).items()
