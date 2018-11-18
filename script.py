@@ -28,7 +28,7 @@ if delete_tweets:
     ignored_count = 0
     #This depends on how many tweets do you have, may take a while, run in a vpn 24/7
     for tweet in timeline:
-        if tweet.id not in tweets_to_save and tweet.created_at < cutoff_date:
+        if tweet.id not in tweets_to_save and tweet.created_at < days_you_want_to_keep:
             if verbose:
                 print(f"Deleting {tweet.id}: [{tweet.created_at}] {tweet.text}")
             if not test:
